@@ -6,7 +6,16 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "universe/shared/typescript-analysis"
+  ],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.d.ts"],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      }
+    }
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
