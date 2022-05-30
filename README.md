@@ -1,15 +1,15 @@
 # Plac-talk
 
-Aplicativo para mobile mobile learning de Portugês como lingua de acolhimento. Ess projeto se diferencia de outtros aplicativos de ensino de linguas por que se propõe a tratalhar em primeiro lugar com temas que contemplem a urgência do aprendisado da lingua do pais que acolhe por imigrantes e refugiados. O usuários precisam, por exemplo:
+Aplicativo para mobile learning de Português como Lingua de Acolhimento. Esse projeto se diferencia de outros aplicativos de ensino de linguas porque se propõe a trabalhar em primeiro lugar com temas que contemplem a urgência do aprendizado da língua do país que acolhe imigrantes e refugiados. O usuários precisam, por exemplo:
 
-- Encontrar trabalho
-- Acessar serviços de saúde
-- Requisitar documentos
-- Ter acesso à escola para si e para os filhos
-- Entre outras situações de interação linguistica
+- Encontrar trabalho;
+- Acessar serviços de saúde;
+- Requisitar documentos;
+- Ter acesso à escola para si e para os filhos;
+- Entre outras situações de interação linguistica.
 
-Por intermédio de atividades em que são apresentadas situações de interação, os gêneros discursivos que são utilizados nessas situações, bem como aspectos lexco-gramaticais da lingua portuguesa brasileira.
+A apredizagem será por intermédio de atividades em que são apresentadas situações de interação, os gêneros discursivos que são utilizados nessas situações, bem como aspectos lexico-gramaticais da lingua portuguesa brasileira.
 
-## Ferramenta utilizadas
+## Ferramentas utilizadas
 
 Em produção.
