@@ -10,7 +10,6 @@ Aplicativo para mobile learning de Português como Lingua de Acolhimento. Esse p
 
 A apredizagem será por intermédio de atividades em que são apresentadas situações de interação, os gêneros discursivos que são utilizados nessas situações, bem como aspectos lexico-gramaticais da lingua portuguesa brasileira.
 
-<<<<<<< HEAD
 ## Temas
 
 - Mundo do Trabalho
@@ -27,8 +26,5 @@ A apredizagem será por intermédio de atividades em que são apresentadas situa
 Em produção.
 
 ## Ferramenta utilizadas
-=======
-## Ferramentas utilizadas
->>>>>>> f59da9d189737e2f4feb7d491e8b57c3f17c7e93
 
 Em produção.
