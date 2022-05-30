@@ -10,6 +10,21 @@ Aplicativo para mobile mobile learning de Portugês como lingua de acolhimento. 
 
 Por intermédio de atividades em que são apresentadas situações de interação, os gêneros discursivos que são utilizados nessas situações, bem como aspectos lexco-gramaticais da lingua portuguesa brasileira.
 
+## Temas
+
+- Mundo do Trabalho
+  - Entrevista
+  - Currículo vida
+- Saúde
+  - Como requisitar o cartão SUS
+  - Consulta médica
+  - Cuidados com a saúde física
+  - Cuidados com a saúde odontológica
+
+## Sobre o desenvolvimento
+
+Em produção.
+
 ## Ferramenta utilizadas
 
 Em produção.
