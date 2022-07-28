@@ -8,7 +8,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <View style={styles.container}>
         <Text>Olá Mundo</Text>
-        <StatusBar style="auto" />
+        <StatusBar style="dark" />
       </View>
     </ThemeProvider>
   );
