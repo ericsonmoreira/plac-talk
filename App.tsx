@@ -13,13 +13,11 @@ import {
   Roboto_900Black_Italic,
   useFonts,
 } from '@expo-google-fonts/roboto';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { ThemeProvider } from 'styled-components';
-import Button from './src/components/Button';
-import theme from './theme';
-import Ionicons from '@expo/vector-icons/Ionicons';
+import { NavigationContainer } from '@react-navigation/native';
 import AppLoading from 'expo-app-loading';
+import { ThemeProvider } from 'styled-components';
+import Routes from './src/routes/app.routes';
+import theme from './theme';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -43,21 +41,9 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <View style={styles.container}>
-        <Text>Olá Mundo</Text>
-        <Ionicons name="md-checkmark-circle" size={32} color="green" />
-        <Button color="asd">Teoria e exemplos</Button>
-        <StatusBar style="dark" />
-      </View>
+      <NavigationContainer>
+        <Routes />
+      </NavigationContainer>
     </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: theme.palette.background,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
