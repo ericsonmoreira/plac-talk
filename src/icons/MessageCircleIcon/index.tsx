@@ -1,7 +1,7 @@
 import React from 'react';
 import Svg, { Path, SvgProps } from 'react-native-svg';
 
-const MessageCircle: React.FC<SvgProps> = (props) => {
+const MessageCircleIcon: React.FC<SvgProps> = (props) => {
   return (
     <Svg width={71} height={71} viewBox="0 0 71 71" fill="none" {...props}>
       <Path
@@ -15,4 +15,4 @@ const MessageCircle: React.FC<SvgProps> = (props) => {
   );
 };
 
-export default MessageCircle;
+export default MessageCircleIcon;

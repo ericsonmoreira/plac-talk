@@ -3,8 +3,12 @@ import { FlatList, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import theme from '../../../theme';
 import TopiqButton from '../../components/TopiqButton';
+import AddressBookIcon from '../../icons/AddressBookIcon';
+import FileIcon from '../../icons/FileIcon';
 import JobIcon from '../../icons/JobIcon';
+import MessageCircleIcon from '../../icons/MessageCircleIcon';
 import StethoscopeIcon from '../../icons/StethoscopeIcon';
+import UserCheck from '../../icons/UserCheck';
 
 interface Topiq {
   id: number;
@@ -18,7 +22,10 @@ const Home: React.FC = () => {
     { id: 1, title: 'Mundo do trabalho 1', icon: JobIcon, percent: 0.1 },
     { id: 2, title: 'Mundo do trabalho 2', icon: JobIcon, percent: 0.1 },
     { id: 3, title: 'Saúde 1', icon: StethoscopeIcon, percent: 0.1 },
-    { id: 4, title: 'Saúde 2', icon: StethoscopeIcon, percent: 1 },
+    { id: 4, title: 'Saúde 2', icon: UserCheck, percent: 1 },
+    { id: 5, title: 'Saúde 2', icon: FileIcon },
+    { id: 6, title: 'Saúde 2', icon: MessageCircleIcon },
+    { id: 7, title: 'Saúde 2', icon: AddressBookIcon },
   ] as Topiq[];
 
   return (

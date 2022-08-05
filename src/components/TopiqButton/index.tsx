@@ -16,7 +16,9 @@ const TopiqButton: React.FC<TouchableOpacityProps & TopiqButtonProps> = (props) 
         <Icon />
         {percent && <Text style={styles.percent}>{`${percent * 100}%`}</Text>}
       </TouchableOpacity>
-      <Text style={styles.title}>{title}</Text>
+      <Text numberOfLines={2} ellipsizeMode="tail" style={styles.title}>
+        {title}
+      </Text>
     </View>
   );
 };
@@ -24,7 +26,7 @@ const TopiqButton: React.FC<TouchableOpacityProps & TopiqButtonProps> = (props) 
 const styles = StyleSheet.create({
   container: {
     width: 128,
-    height: 195,
+    height: 170,
     alignItems: 'center',
     justifyContent: 'space-between',
   },
@@ -55,7 +57,6 @@ const styles = StyleSheet.create({
     right: -4,
     fontFamily: 'Roboto_400Regular',
     fontSize: 12,
-    lineHeight: 24,
     paddingHorizontal: 6,
     paddingVertical: 4,
   },
