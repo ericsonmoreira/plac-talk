@@ -3,15 +3,18 @@ import { StyleSheet, Text, TouchableOpacity, TouchableOpacityProps, View } from 
 
 interface TopiqButtonProps {
   title: string;
+  percent?: number;
+  icon: React.ComponentType;
 }
 
 const TopiqButton: React.FC<TouchableOpacityProps & TopiqButtonProps> = (props) => {
-  const { title } = props;
+  const { title, percent, icon: Icon } = props;
 
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.button} {...props}>
-        <Text>TopiqButton</Text>
+        <Icon />
+        {percent && <Text style={styles.percent}>{`${percent * 100}%`}</Text>}
       </TouchableOpacity>
       <Text style={styles.title}>{title}</Text>
     </View>
@@ -21,7 +24,7 @@ const TopiqButton: React.FC<TouchableOpacityProps & TopiqButtonProps> = (props) 
 const styles = StyleSheet.create({
   container: {
     width: 128,
-    height: 172,
+    height: 195,
     alignItems: 'center',
     justifyContent: 'space-between',
   },
@@ -32,6 +35,7 @@ const styles = StyleSheet.create({
     borderWidth: 4,
     borderColor: '#FFF',
     display: 'flex',
+    position: 'relative',
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#FFF38B',
@@ -41,6 +45,19 @@ const styles = StyleSheet.create({
     fontFamily: 'Roboto_400Regular',
     fontSize: 18,
     lineHeight: 24,
+  },
+  percent: {
+    color: '#494141',
+    backgroundColor: '#9EDBDC',
+    borderRadius: 8,
+    position: 'absolute',
+    bottom: -14,
+    right: -4,
+    fontFamily: 'Roboto_400Regular',
+    fontSize: 12,
+    lineHeight: 24,
+    paddingHorizontal: 6,
+    paddingVertical: 4,
   },
 });
 
