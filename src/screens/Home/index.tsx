@@ -1,3 +1,5 @@
+import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -6,22 +8,18 @@ import TopiqButton from '../../components/TopiqButton';
 import JobIcon from '../../icons/JobIcon';
 import StethoscopeIcon from '../../icons/StethoscopeIcon';
 import UserCheckIcon from '../../icons/UserCheckIcon';
+import { RootBottomTabParams } from '../../routes/app.routes';
 import { MundoDoTrabalhoOne, MundoDoTrabalhoTwo, SaudeOne, SaudeTwo } from '../../topics';
 
-interface HomeTopiq {
-  id: number;
-  title: string;
-  percent?: number;
-  icon: React.ComponentType;
-}
+const topiqs = [
+  { ...MundoDoTrabalhoOne, percent: 0.1 },
+  { ...MundoDoTrabalhoTwo, icon: JobIcon, percent: 0.1 },
+  { ...SaudeOne, icon: StethoscopeIcon, percent: 0.1 },
+  { ...SaudeTwo, icon: UserCheckIcon, percent: 1 },
+];
 
 const Home: React.FC = () => {
-  const topiqs = [
-    { ...MundoDoTrabalhoOne, percent: 0.1 },
-    { ...MundoDoTrabalhoTwo, icon: JobIcon, percent: 0.1 },
-    { ...SaudeOne, icon: StethoscopeIcon, percent: 0.1 },
-    { ...SaudeTwo, icon: UserCheckIcon, percent: 1 },
-  ] as HomeTopiq[];
+  const navigation = useNavigation<BottomTabNavigationProp<RootBottomTabParams>>();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -36,7 +34,12 @@ const Home: React.FC = () => {
           columnWrapperStyle={{ padding: 10 }}
           renderItem={({ item }) => (
             <View style={{ width: '50%', alignItems: 'center' }}>
-              <TopiqButton title={item.title} percent={item.percent} icon={item.icon} />
+              <TopiqButton
+                title={item.title}
+                percent={item.percent}
+                icon={item.icon}
+                onPress={() => navigation.navigate('CLIPBOARD', { subTopics: item.subTopis })}
+              />
             </View>
           )}
           keyExtractor={(item) => String(item.id)}
@@ -46,6 +49,7 @@ const Home: React.FC = () => {
   );
 };
 
+// TODO: usar styled components aqui
 const styles = StyleSheet.create({
   container: {
     flex: 1,

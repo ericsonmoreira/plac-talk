@@ -6,9 +6,17 @@ import theme from '../../theme';
 import Clipboard from '../screens/Clipboard';
 import Home from '../screens/Home';
 import Settings from '../screens/Settings';
-import { RoutesNames } from './routes.names';
+import { Topic } from '../topics';
 
-const { Navigator, Screen } = createBottomTabNavigator();
+export type RootBottomTabParams = {
+  HOME: undefined;
+  SETTINGS: undefined;
+  CLIPBOARD: {
+    subTopics: Topic[];
+  };
+};
+
+const { Navigator, Screen } = createBottomTabNavigator<RootBottomTabParams>();
 
 interface TabBarIconProps {
   routeName: 'HOME' | 'SETTINGS' | 'CLIPBOARD';
@@ -40,9 +48,9 @@ const Routes: React.FC = () => {
           backgroundColor: '#E9FFE1',
         },
       })}>
-      <Screen name={RoutesNames.HOME} component={Home} />
-      <Screen name={RoutesNames.CLIPBOARD} component={Clipboard} />
-      <Screen name={RoutesNames.SETTINGS} component={Settings} />
+      <Screen name="HOME" component={Home} />
+      <Screen name="CLIPBOARD" component={Clipboard} />
+      <Screen name="SETTINGS" component={Settings} />
     </Navigator>
   );
 };

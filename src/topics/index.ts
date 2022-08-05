@@ -12,35 +12,6 @@ export interface Topic {
   icon: React.ComponentType;
 }
 
-// Princiáis Tópicos
-export const MundoDoTrabalhoOne: Topic = {
-  id: 1,
-  title: 'Mundo do trabalho 1',
-  subTopis: [],
-  icon: JobIcon,
-};
-
-export const MundoDoTrabalhoTwo: Topic = {
-  id: 2,
-  title: 'Mundo do trabalho 2',
-  subTopis: [],
-  icon: JobIcon,
-};
-
-export const SaudeOne: Topic = {
-  id: 3,
-  title: 'Saúde 1',
-  subTopis: [],
-  icon: StethoscopeIcon,
-};
-
-export const SaudeTwo: Topic = {
-  id: 4,
-  title: 'Saúde 2',
-  subTopis: [],
-  icon: StethoscopeIcon,
-};
-
 // Subtópicos
 export const Curriculo: Topic = {
   id: 4,
@@ -68,4 +39,33 @@ export const CarteiraDeTrabalho: Topic = {
   title: 'Carteira de Trabalho',
   subTopis: [],
   icon: AddressBookIcon,
+};
+
+// Princiáis Tópicos
+export const MundoDoTrabalhoOne: Topic = {
+  id: 1,
+  title: 'Mundo do trabalho 1',
+  subTopis: [Curriculo, Habilidades, Entrevista, CarteiraDeTrabalho],
+  icon: JobIcon,
+};
+
+export const MundoDoTrabalhoTwo: Topic = {
+  id: 2,
+  title: 'Mundo do trabalho 2',
+  subTopis: [],
+  icon: JobIcon,
+};
+
+export const SaudeOne: Topic = {
+  id: 3,
+  title: 'Saúde 1',
+  subTopis: [],
+  icon: StethoscopeIcon,
+};
+
+export const SaudeTwo: Topic = {
+  id: 4,
+  title: 'Saúde 2',
+  subTopis: [],
+  icon: StethoscopeIcon,
 };
