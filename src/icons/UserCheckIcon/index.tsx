@@ -1,7 +1,7 @@
 import React from 'react';
 import Svg, { ClipPath, Defs, Path, Rect, SvgProps } from 'react-native-svg';
 
-const UserCheck: React.FC<SvgProps> = (props) => {
+const UserCheckIcon: React.FC<SvgProps> = (props) => {
   return (
     <Svg width={71} height={71} viewBox="0 0 71 71" fill="none" {...props}>
       <Path
@@ -17,4 +17,4 @@ const UserCheck: React.FC<SvgProps> = (props) => {
   );
 };
 
-export default UserCheck;
+export default UserCheckIcon;

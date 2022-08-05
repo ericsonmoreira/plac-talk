@@ -3,14 +3,12 @@ import { FlatList, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import theme from '../../../theme';
 import TopiqButton from '../../components/TopiqButton';
-import AddressBookIcon from '../../icons/AddressBookIcon';
-import FileIcon from '../../icons/FileIcon';
 import JobIcon from '../../icons/JobIcon';
-import MessageCircleIcon from '../../icons/MessageCircleIcon';
 import StethoscopeIcon from '../../icons/StethoscopeIcon';
-import UserCheck from '../../icons/UserCheck';
+import UserCheckIcon from '../../icons/UserCheckIcon';
+import { MundoDoTrabalhoOne, MundoDoTrabalhoTwo, SaudeOne, SaudeTwo } from '../../topics';
 
-interface Topiq {
+interface HomeTopiq {
   id: number;
   title: string;
   percent?: number;
@@ -19,27 +17,27 @@ interface Topiq {
 
 const Home: React.FC = () => {
   const topiqs = [
-    { id: 1, title: 'Mundo do trabalho 1', icon: JobIcon, percent: 0.1 },
-    { id: 2, title: 'Mundo do trabalho 2', icon: JobIcon, percent: 0.1 },
-    { id: 3, title: 'Saúde 1', icon: StethoscopeIcon, percent: 0.1 },
-    { id: 4, title: 'Saúde 2', icon: UserCheck, percent: 1 },
-    { id: 5, title: 'Saúde 2', icon: FileIcon },
-    { id: 6, title: 'Saúde 2', icon: MessageCircleIcon },
-    { id: 7, title: 'Saúde 2', icon: AddressBookIcon },
-  ] as Topiq[];
+    { ...MundoDoTrabalhoOne, percent: 0.1 },
+    { ...MundoDoTrabalhoTwo, icon: JobIcon, percent: 0.1 },
+    { ...SaudeOne, icon: StethoscopeIcon, percent: 0.1 },
+    { ...SaudeTwo, icon: UserCheckIcon, percent: 1 },
+  ] as HomeTopiq[];
 
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Escolha um tópico para praticar</Text>
       <View style={styles.content}>
         <FlatList
+          style={{ width: '100%' }}
           data={topiqs}
           numColumns={2}
           horizontal={false}
           showsVerticalScrollIndicator={false}
           columnWrapperStyle={{ padding: 10 }}
           renderItem={({ item }) => (
-            <TopiqButton title={item.title} percent={item.percent} icon={item.icon} />
+            <View style={{ width: '50%', alignItems: 'center' }}>
+              <TopiqButton title={item.title} percent={item.percent} icon={item.icon} />
+            </View>
           )}
           keyExtractor={(item) => String(item.id)}
         />
