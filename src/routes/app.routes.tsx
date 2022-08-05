@@ -2,6 +2,7 @@
 import { Feather } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
+import theme from '../../theme';
 import Clipboard from '../screens/Clipboard';
 import Home from '../screens/Home';
 import Settings from '../screens/Settings';
@@ -30,9 +31,14 @@ const Routes: React.FC = () => {
     <Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
+        tabBarActiveTintColor: theme.palette.primary.main,
         tabBarIcon: ({ color, size }) => (
           <TabBarIcon routeName={route.name as any} size={size} color={color} />
         ),
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          backgroundColor: '#E9FFE1',
+        },
       })}>
       <Screen name={RoutesNames.HOME} component={Home} />
       <Screen name={RoutesNames.CLIPBOARD} component={Clipboard} />
