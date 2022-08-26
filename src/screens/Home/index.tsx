@@ -65,8 +65,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 25,
     textAlign: 'center',
-    fontWeight: '500',
-    fontFamily: 'Roboto_400Regular',
+    fontFamily: theme.fonts.medium,
     marginTop: 10,
     paddingHorizontal: 10,
   },

@@ -23,6 +23,7 @@ const TopiqButton: React.FC<TouchableOpacityProps & TopiqButtonProps> = (props) 
   );
 };
 
+// TODO: passar isso para styled components
 const styles = StyleSheet.create({
   container: {
     width: 128,

@@ -18,6 +18,7 @@ const Clipboard: React.FC = () => {
   );
 };
 
+// TODO: usar o styled components aqui
 const styles = StyleSheet.create({
   container: {
     flex: 1,

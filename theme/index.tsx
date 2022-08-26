@@ -1,6 +1,4 @@
-import { DefaultTheme } from 'styled-components';
-
-const theme: DefaultTheme = {
+const theme = {
   borderRadius: '4px',
   palette: {
     background: '#B5E7FF',
@@ -16,6 +14,11 @@ const theme: DefaultTheme = {
       main: '#00BFA6',
       contrastText: '#000',
     },
+  },
+  fonts: {
+    regular: 'Roboto_400Regular',
+    medium: 'Roboto_500Medium',
+    bold: 'Roboto_700Bold',
   },
 };
 
